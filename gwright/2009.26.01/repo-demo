@@ -1,0 +1,57 @@
+
+# local repo
+mkdir
+git init
+ls
+git status
+echo "text" > README
+git status
+git add
+git commit -a
+git status
+git log
+git show HEAD
+
+# github
+create hartford-rb repo
+
+# remote
+git remote add github git@github.com:gwright/hartford-rb.git
+git remote
+
+# local
+git push github
+git push github master
+git push github
+
+# new repo via clone
+repo2: git clone git@github.com:gwright/hartford-rb.git repo2
+
+# show info
+repo2: git remote
+
+# edit
+repo2: vi feature
+repo2: git commit -a
+repo2: git push
+
+# look at repo on github
+
+# change to repo1
+repo1: git diff origin/master
+repo1: git fetch
+repo1: ls
+repo1: git diff origin/master
+repo1: git merge origin/master
+repo1: git log   # compare to other repo
+
+# change to repo2
+repo2: vi feature2
+repo2: git add feature2
+repo2: git commit
+repo2: git push
+
+# change to repo
+repo: git pull origin master
+repo: ls
+

@@ -1,0 +1,18 @@
+$ ls
+$ git branch
+$ git checkout -b topic/feature3
+$ vi feature3.rb
+$ git status
+$ git add feature3.rb
+$ git commit -a
+$ vi feature3.rb
+$ git status
+$ git stash
+$ git checkout master
+$ ls
+$ vi feature
+$ git commit feature
+$ git push
+$ git checkout topic/feature3
+$ git stash pop
+$ ls

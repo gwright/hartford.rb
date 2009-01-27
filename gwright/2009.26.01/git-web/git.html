@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta name="description" content="Distributed SCM with git Hartford.rb 1/26 github repo1 repo2     Agenda structure of a git repository the network of repositories working with a repository discussion  Git Repository Structure collection of blobs named by SHA1 checksum blob types: files tree commits              $ ls .git/objects08	32	48	66	92	9e	a1	c1	c5	e3	ec	f9	pack1e	43	56	87	99	9f	a3	c2	e2	e6	f1	info$ ls -l .git/objects/08total 8-r--r--r--  1 gwright  staff  40 Jan 23 22:57 806face111c9682eb9982605321f9461ac8b29$   SHA1 DAG 66b1783ebb17905886b178658d39875830ea4fd2              previous commit  File hierarchy   References (name, SHA1) tuple namespace is local to repo branch x: (refs/heads/x, SHA1) tag y: (refs/tags/y, SHA1)  $ git branch* master$ git branch feature$ ls .git/refs/headsfeature	master $ git branch  feature* master$ ls -l .git/refs/heads/feature-rw-r--r--  1 gwright  staff  41 Jan 26 11:14 .git/refs/heads/feature$ cat  .git/refs/heads/feature48f3d833c2c2b0fc72542000cbebdd9c9cd4988f  Branching, Commits, and Tags             master feature        feature2     v1.0    Network of Repositories network defined implicitly authority defined by usage commits local to repo commits shared via repo synchronization process github repo1 repo2    dev1 github  github dev2  origin github dev2 github dev1 Synchronization Overview                        A B  B: push A Synchronization Detail B: fetch A  B: push A  Live Demonstration  Distributed History              master feature       feature2     v1.0      master     master       Working Tree and Index working tree: native file tree based on a commit index: staging area for next commit git-checkout: establish working tree and index git-add: add modified files to staging area git-reset: reset staged files or working files   A B   index  working tree  HEAD  git-checkout   git-add   edit C   git-commit Edit/Add/Commit Cycle  Live Demonstration  Collaboration R r0 c0 c1 c2 r0  r1 r1        X     git rebase                  merge        rebase   master feature"/>
+    <title></title>
+    <script type="text/javascript" language="javascript">
+//      <![CDATA[
+            var images = new Array (83);
+            images[0] = "git_files/git.001-001.jpg";
+            images[1] = "git_files/git.002-001.jpg";
+            images[2] = "git_files/git.003-001.jpg";
+            images[3] = "git_files/git.003-002.jpg";
+            images[4] = "git_files/git.003-003.jpg";
+            images[5] = "git_files/git.003-004.jpg";
+            images[6] = "git_files/git.003-005.jpg";
+            images[7] = "git_files/git.003-006.jpg";
+            images[8] = "git_files/git.004-001.jpg";
+            images[9] = "git_files/git.004-002.jpg";
+            images[10] = "git_files/git.005-001.jpg";
+            images[11] = "git_files/git.005-002.jpg";
+            images[12] = "git_files/git.006-001.jpg";
+            images[13] = "git_files/git.006-002.jpg";
+            images[14] = "git_files/git.006-003.jpg";
+            images[15] = "git_files/git.006-004.jpg";
+            images[16] = "git_files/git.006-005.jpg";
+            images[17] = "git_files/git.006-006.jpg";
+            images[18] = "git_files/git.006-007.jpg";
+            images[19] = "git_files/git.006-008.jpg";
+            images[20] = "git_files/git.006-009.jpg";
+            images[21] = "git_files/git.006-010.jpg";
+            images[22] = "git_files/git.006-011.jpg";
+            images[23] = "git_files/git.006-012.jpg";
+            images[24] = "git_files/git.007-001.jpg";
+            images[25] = "git_files/git.008-001.jpg";
+            images[26] = "git_files/git.008-002.jpg";
+            images[27] = "git_files/git.008-003.jpg";
+            images[28] = "git_files/git.008-004.jpg";
+            images[29] = "git_files/git.008-005.jpg";
+            images[30] = "git_files/git.008-006.jpg";
+            images[31] = "git_files/git.008-007.jpg";
+            images[32] = "git_files/git.008-008.jpg";
+            images[33] = "git_files/git.009-001.jpg";
+            images[34] = "git_files/git.009-002.jpg";
+            images[35] = "git_files/git.009-003.jpg";
+            images[36] = "git_files/git.009-004.jpg";
+            images[37] = "git_files/git.009-005.jpg";
+            images[38] = "git_files/git.009-006.jpg";
+            images[39] = "git_files/git.009-007.jpg";
+            images[40] = "git_files/git.009-008.jpg";
+            images[41] = "git_files/git.009-009.jpg";
+            images[42] = "git_files/git.009-010.jpg";
+            images[43] = "git_files/git.010-001.jpg";
+            images[44] = "git_files/git.011-001.jpg";
+            images[45] = "git_files/git.011-002.jpg";
+            images[46] = "git_files/git.011-003.jpg";
+            images[47] = "git_files/git.011-004.jpg";
+            images[48] = "git_files/git.011-005.jpg";
+            images[49] = "git_files/git.011-006.jpg";
+            images[50] = "git_files/git.011-007.jpg";
+            images[51] = "git_files/git.011-008.jpg";
+            images[52] = "git_files/git.011-009.jpg";
+            images[53] = "git_files/git.011-010.jpg";
+            images[54] = "git_files/git.011-011.jpg";
+            images[55] = "git_files/git.011-012.jpg";
+            images[56] = "git_files/git.011-013.jpg";
+            images[57] = "git_files/git.011-014.jpg";
+            images[58] = "git_files/git.012-001.jpg";
+            images[59] = "git_files/git.013-001.jpg";
+            images[60] = "git_files/git.013-002.jpg";
+            images[61] = "git_files/git.013-003.jpg";
+            images[62] = "git_files/git.013-004.jpg";
+            images[63] = "git_files/git.013-005.jpg";
+            images[64] = "git_files/git.013-006.jpg";
+            images[65] = "git_files/git.014-001.jpg";
+            images[66] = "git_files/git.015-001.jpg";
+            images[67] = "git_files/git.015-002.jpg";
+            images[68] = "git_files/git.015-003.jpg";
+            images[69] = "git_files/git.015-004.jpg";
+            images[70] = "git_files/git.015-005.jpg";
+            images[71] = "git_files/git.015-006.jpg";
+            images[72] = "git_files/git.015-007.jpg";
+            images[73] = "git_files/git.015-008.jpg";
+            images[74] = "git_files/git.016-001.jpg";
+            images[75] = "git_files/git.016-002.jpg";
+            images[76] = "git_files/git.016-003.jpg";
+            images[77] = "git_files/git.016-004.jpg";
+            images[78] = "git_files/git.016-005.jpg";
+            images[79] = "git_files/git.016-006.jpg";
+            images[80] = "git_files/git.016-007.jpg";
+            images[81] = "git_files/git.016-008.jpg";
+            images[82] = "git_files/git.016-009.jpg";
+            var index = 0;
+            function WindowLoaded(evt)
+            {
+                document.body.onselectstart = function () { return false; };
+            }
+            function Step(i)
+            {
+                GoTo(index + i)
+            }
+            function GoTo(newIndex)
+            {
+                if(newIndex >= 0 && newIndex < images.length)
+                {
+                    index = newIndex;
+                    document.Slideshow.src = images[index];
+                }
+            }
+//      ]]>
+    </script>
+</head>
+<body bgcolor="black" onload='WindowLoaded(event);'>
+    <p align="center">
+        <br/>
+        <br/>
+        <img name="Slideshow" alt="" src="git_files/git.001-001.jpg" onclick="Step(1)"/>
+        <br/>
+        <br/>
+        <input type="image" src="git_files/home.png" onclick="GoTo(0)"/>
+        &nbsp;&nbsp;&nbsp;
+        <input type="image" src="git_files/prev.png" onclick="Step(-1)"/>
+        <input type="image" src="git_files/next.png" onclick="Step(1)"/>
+    </p>
+</body>
+</html>

@@ -1,0 +1,30 @@
+$ cd repo
+$ ls
+$ git init
+$ vi README
+$ git add README
+$ git commit -m 'initial'
+$ git branch trial1
+$ git checkout trial1
+$ vi README 
+$ git commit README -m 'trial1 initial commit'
+$ git checkout master
+$ git checkout -b 'trial2'
+$ vi README
+$ git commit README -m 'trial2 initial commit'
+$ git branch
+$ git log
+$ git show-branch
+$ git checkout master
+$ git merge trial1  # fast-forward
+$ git merge trial2  # conflict
+$ cat README
+$ echo 'This is the merged README' > README
+$ git status
+$ git add README
+$ git commit
+$ git log
+$ cat README
+$ git diff trial2
+$ git diff trial3
+$ git branch -d trial1
